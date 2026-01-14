@@ -8,6 +8,7 @@
 </head>
 <body>
 
+<!-- NAVBAR -->
 <div class="navbar">
   <div class="nav-container">
     <div class="nav-logo">CollabTech</div>
@@ -21,35 +22,84 @@
   </div>
 </div>
 
+<!-- MAIN -->
 <div class="container">
 
   <div class="hero">
     <h1>Sign Up</h1>
-    <p>Create a new CollabTech account</p>
+    <p>Create a CollabTech account</p>
   </div>
 
   <div class="card">
-    <p><strong>Name</strong></p>
-    <p><input type="text" placeholder="Full name" style="width:100%; padding:10px;"></p>
+    <form id="signupForm">
+      <input
+        type="email"
+        id="email"
+        placeholder="Email"
+        required
+        style="width:100%; padding:10px; margin-bottom:10px;"
+      >
 
-    <p><strong>Email</strong></p>
-    <p><input type="email" placeholder="Email address" style="width:100%; padding:10px;"></p>
+      <input
+        type="password"
+        id="password"
+        placeholder="Password"
+        required
+        style="width:100%; padding:10px; margin-bottom:15px;"
+      >
 
-    <p><strong>Password</strong></p>
-    <p><input type="password" placeholder="Create a password" style="width:100%; padding:10px;"></p>
-
-    <p style="margin-top:15px;">
-      <button style="padding:12px 18px; border-radius:12px; border:none; background:#38bdf8; font-weight:600;">
+      <button
+        type="submit"
+        class="button"
+        style="cursor:pointer;"
+      >
         Sign Up
       </button>
-    </p>
+
+      <p id="message" style="margin-top:10px;"></p>
+    </form>
   </div>
 
-  <footer>
-    CollabTech Study Guide • ICT Educational Resource
-  </footer>
-
 </div>
+
+<!-- FIREBASE + SIGNUP LOGIC -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyAAN9t4uz6ZJHCDq-9tTWJ_ej72_ZSCz3U",
+    authDomain: "collabtech-c6e3b.firebaseapp.com",
+    projectId: "collabtech-c6e3b",
+    storageBucket: "collabtech-c6e3b.firebasestorage.app",
+    messagingSenderId: "833329211783",
+    appId: "1:833329211783:web:3a692628df2edea19e4b22"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  const form = document.getElementById("signupForm");
+  const message = document.getElementById("message");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    createUserWithEmailAndPassword(auth, email, password)
+      .then(() => {
+        message.style.color = "#38bdf8";
+        message.textContent = "Account created successfully!";
+        form.reset();
+      })
+      .catch((error) => {
+        message.style.color = "#f87171";
+        message.textContent = error.message;
+      });
+  });
+</script>
 
 </body>
 </html>
