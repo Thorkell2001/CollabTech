@@ -138,3 +138,86 @@ footer {
   max-width: 420px;
   width: 100%;
 }
+
+/* ===============================
+   AUTH PAGES FIX (LOGIN / SIGNUP)
+================================ */
+
+.auth-page {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 35px;
+}
+
+/* Inputs */
+.auth-card input {
+  width: 100%;
+  padding: 14px 16px;
+  margin: 12px 0;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.08);
+  color: #e5e7eb;
+  font-size: 1rem;
+}
+
+.auth-card input::placeholder {
+  color: #94a3b8;
+}
+
+.auth-card input:focus {
+  outline: none;
+  border-color: #38bdf8;
+}
+
+/* Buttons */
+.auth-card button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: #020617;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.auth-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(56,189,248,0.35);
+}
+
+/* Text links */
+.auth-card p {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.auth-card a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-card a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile fix */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 28px 22px;
+  }
+}
