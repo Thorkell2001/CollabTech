@@ -6,13 +6,29 @@
   <title>Login</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="container card">
-    <h2>Login</h2>
-    <input id="login-email" type="email" placeholder="Email" required>
-    <input id="login-password" type="password" placeholder="Password" required>
-    <button onclick="loginUser()">Login</button>
-    <p>No account? <a href="signup.html">Sign up</a></p>
+
+  <!-- NAVBAR (KEEP THIS) -->
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="modules.html">Study Modules</a>
+    <a href="about.html">About Us</a>
+    <a href="login.html" class="active">Login</a>
+  </nav>
+
+  <!-- LOGIN -->
+  <div class="auth-page">
+    <div class="card auth-card">
+      <h2>Login</h2>
+
+      <input id="login-email" type="email" placeholder="Email">
+      <input id="login-password" type="password" placeholder="Password">
+
+      <button onclick="loginUser()">Login</button>
+
+      <p>No account? <a href="signup.html">Sign up</a></p>
+    </div>
   </div>
 
   <script type="module" src="auth.js"></script>
