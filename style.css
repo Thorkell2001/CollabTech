@@ -12,52 +12,78 @@ body {
   font-family: 'Inter', sans-serif;
   background: linear-gradient(135deg, #0f172a, #020617);
   color: #e5e7eb;
-  line-height: 1.6;
   min-height: 100vh;
 }
 
 /* LINKS */
 a {
-  color: #38bdf8;
+  color: inherit;
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
+/* NAVBAR */
+.navbar {
+  width: 100%;
+  background: rgba(2, 6, 23, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #38bdf8;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  font-size: 0.95rem;
+  color: #cbd5f5;
+}
+
+.nav-links a:hover {
+  color: #38bdf8;
 }
 
 /* CONTAINER */
 .container {
   max-width: 960px;
   margin: auto;
-  padding: 40px 20px;
+  padding: 50px 20px;
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero {
   text-align: center;
   margin-bottom: 50px;
-  animation: fadeDown 1s ease;
 }
 
 .hero h1 {
-  font-size: 2.8rem;
-  margin-bottom: 10px;
+  font-size: 2.6rem;
+  margin-bottom: 12px;
 }
 
 .hero p {
-  font-size: 1.1rem;
   color: #94a3b8;
+  font-size: 1.05rem;
 }
 
 /* CARD */
 .card {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255,255,255,0.06);
   backdrop-filter: blur(10px);
   border-radius: 18px;
   padding: 30px;
   margin-bottom: 30px;
-  animation: fadeUp 0.9s ease;
 }
 
 .card h2 {
@@ -78,28 +104,6 @@ a:hover {
   margin-bottom: 8px;
 }
 
-/* BUTTON */
-.button {
-  display: inline-block;
-  padding: 12px 18px;
-  border-radius: 12px;
-  background: #38bdf8;
-  color: #020617;
-  font-weight: 600;
-  margin-top: 10px;
-}
-
-.button:hover {
-  background: #0ea5e9;
-}
-
-/* BACK LINK */
-.back {
-  display: inline-block;
-  margin-bottom: 25px;
-  color: #38bdf8;
-}
-
 /* FOOTER */
 footer {
   text-align: center;
@@ -108,36 +112,18 @@ footer {
   color: #64748b;
 }
 
-/* ANIMATIONS */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(25px);
+/* MOBILE */
+@media (max-width: 700px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 10px;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-@keyframes fadeDown {
-  from {
-    opacity: 0;
-    transform: translateY(-25px);
+  .nav-links a {
+    margin: 0 10px;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-/* MOBILE FIX */
-@media (max-width: 600px) {
   .hero h1 {
     font-size: 2rem;
-  }
-
-  .card {
-    padding: 20px;
   }
 }
