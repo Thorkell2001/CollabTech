@@ -134,3 +134,41 @@ footer {
     transform: translateY(0);
   }
 }
+/* =========================
+   CONTENT WIDTH FIX
+   ========================= */
+
+main {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* Section spacing */
+section {
+  margin-bottom: 60px;
+}
+
+/* Headings spacing */
+h1, h2, h3 {
+  line-height: 1.3;
+}
+
+/* Overview text width */
+p {
+  max-width: 70ch;
+}
+
+/* Module grid improvement */
+.tools {
+  margin-top: 40px;
+}
+
+.tool {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tool:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
