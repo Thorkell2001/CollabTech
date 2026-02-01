@@ -7,6 +7,15 @@
 
 </head>
 <body>
+<div id="navbar-placeholder"></div>
+
+<script>
+  fetch("navbar.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar-placeholder").innerHTML = data;
+    });
+</script>
 
 <div class="container">
   <a class="back" href="index.html">← Back to Home</a>
@@ -50,4 +59,5 @@
 
 </body>
 </html>
+
 
