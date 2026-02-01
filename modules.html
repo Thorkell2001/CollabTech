@@ -10,17 +10,16 @@
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar">
-  <div class="nav-container">
-    <div class="nav-logo">CollabTech</div>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="modules.html" class="active">Study Modules</a>
-      <a href="dashboard.html">Dashboard</a>
-    </div>
-  </div>
-</nav>
+<div id="navbar-placeholder"></div>
+
+<script>
+  fetch("navbar.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar-placeholder").innerHTML = data;
+    });
+</script>
+
 
 <!-- PAGE HEADER -->
 <section class="page-header">
@@ -94,3 +93,4 @@
 
 </body>
 </html>
+
