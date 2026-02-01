@@ -2,21 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>Dashboard | CollabTech</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Dashboard</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body onload="checkAuth()">
+<body>
 
-  <div class="container">
-    <h1>Welcome to Your Dashboard</h1>
-    <p>You can now access the study modules.</p>
-
-    <a href="collaboration.html" class="button">Study Modules</a>
-    <br><br>
-    <button onclick="logoutUser()">Logout</button>
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="nav-container">
+    <div class="logo">CollabTech</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="modules.html">Modules</a>
+      <button class="btn-outline" onclick="logout()">Logout</button>
+    </nav>
   </div>
+</header>
 
-  <script type="module" src="auth.js"></script>
+<!-- DASHBOARD -->
+<section class="features">
+  <h2>Your Dashboard</h2>
+
+  <p id="userEmail" style="text-align:center; color:var(--text-muted);"></p>
+
+  <div class="feature-grid" id="moduleHistory"></div>
+</section>
+
+<script type="module" src="dashboard.js"></script>
 </body>
 </html>
