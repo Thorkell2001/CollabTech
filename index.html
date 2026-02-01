@@ -9,17 +9,16 @@
 <body>
 
 <!-- NAVBAR -->
-<header class="navbar">
-  <div class="nav-container">
-    <div class="logo">CollabTech</div>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Modules</a>
-      <a href="#">About</a>
-      <a href="login.html" class="btn-outline">Login</a>
-      <a href="signup.html" class="btn-solid">Sign Up</a>
-    </nav>
-  </div>
+<div id="navbar-placeholder"></div>
+
+<script>
+  fetch("navbar.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar-placeholder").innerHTML = data;
+    });
+</script>
+
 </header>
 
 <!-- HERO -->
@@ -78,4 +77,5 @@
 
 </body>
 </html>
+
 
