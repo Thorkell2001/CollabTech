@@ -6,9 +6,19 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!-- NAVBAR -->
+<div id="navbar-placeholder"></div>
+
+<script>
+  fetch("navbar.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar-placeholder").innerHTML = data;
+    });
+</script>
 
 <div class="container">
-  <a class="back" href="index.html">← Back to Home</a>
+
 
   <div class="hero">
     <h1>Canva</h1>
@@ -72,3 +82,4 @@
 
 </body>
 </html>
+
