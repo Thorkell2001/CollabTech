@@ -1,69 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Best Practices in Group Work</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Best Practices in Group Work</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+<!-- NAVBAR -->
+<div id="navbar-placeholder"></div>
+
+<script>
+  fetch("navbar.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar-placeholder").innerHTML = data;
+    });
+</script>
+
 <div class="container">
-<a class="back" href="index.html">← Back to Home</a>
 
-<div class="hero">
-<h1>Best Practices in Group Work</h1>
-<p>Collaborate Effectively</p>
-</div>
+  <div class="hero">
+    <h1>Best Practices in Group Work</h1>
+    <p>Collaborate Effectively</p>
+  </div>
 
-<div class="card">
-<h2>Clear Goals & Roles</h2>
-<p>Define objectives and assign responsibilities.</p>
-</div>
+  <div class="card">
+    <h2>Clear Goals & Roles</h2>
+    <p>Define objectives and assign responsibilities.</p>
+  </div>
 
-<div class="card">
-<h2>Open Communication</h2>
-<ul>
-<li>Active Listening</li>
-<li>Constructive Feedback</li>
-<li>Regular Updates</li>
-</ul>
-</div>
+  <div class="card">
+    <h2>Open Communication</h2>
+    <ul>
+      <li>Active Listening</li>
+      <li>Constructive Feedback</li>
+      <li>Regular Updates</li>
+    </ul>
+  </div>
 
-<div class="card">
-<h2>Structured Approach</h2>
-<ul>
-<li>Set agendas</li>
-<li>Manage time</li>
-<li>Assign action items with deadlines</li>
-</ul>
-</div>
+  <div class="card">
+    <h2>Structured Approach</h2>
+    <ul>
+      <li>Set agendas</li>
+      <li>Manage time</li>
+      <li>Assign action items with deadlines</li>
+    </ul>
+  </div>
 
-<div class="card">
-<h2>Collaboration & Diversity</h2>
-<p>Value perspectives, involve everyone, be willing to compromise.</p>
-</div>
+  <div class="card">
+    <h2>Collaboration & Diversity</h2>
+    <p>Value perspectives, involve everyone, be willing to compromise.</p>
+  </div>
 
-<div class="card">
-<h2>Conflict Resolution</h2>
-<p>Address early, focus on solutions, mediate if needed.</p>
-</div>
+  <div class="card">
+    <h2>Conflict Resolution</h2>
+    <p>Address early, focus on solutions, mediate if needed.</p>
+  </div>
 
-<div class="card">
-<h2>Psychological Safety</h2>
-<p>Create a safe environment, encourage respectful responses.</p>
-</div>
+  <div class="card">
+    <h2>Psychological Safety</h2>
+    <p>Create a safe environment, encourage respectful responses.</p>
+  </div>
 
-<div class="card">
-<h2>Decision-Making Process</h2>
-<p>Use consensus or majority vote, ensure transparency.</p>
-</div>
+  <div class="card">
+    <h2>Decision-Making Process</h2>
+    <p>Use consensus or majority vote, ensure transparency.</p>
+  </div>
 
-<div class="card">
-<h2>Leverage Technology</h2>
-<p>Centralized communication (Slack/Teams), shared workspace (Drive/SharePoint).</p>
-</div>
-
-<footer>CollabTech Study Guide</footer>
-</div>
-</body>
-</html>
+  <div class="card">
+    <h2>Leverage Technology</h2>
+    <p>Centralized comm
