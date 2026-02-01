@@ -4,31 +4,34 @@
   <meta charset="UTF-8">
   <title>Study Modules | CollabTech</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="modules.css">
 </head>
 
 <body>
 
 <!-- NAVBAR -->
-<header class="navbar light">
+<nav class="navbar">
   <div class="nav-container">
-    <div class="logo">CollabTech</div>
-    <nav>
+    <div class="nav-logo">CollabTech</div>
+    <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
       <a href="modules.html" class="active">Study Modules</a>
       <a href="dashboard.html">Dashboard</a>
-    </nav>
+    </div>
   </div>
-</header>
+</nav>
 
-<!-- HERO -->
-<section class="page-hero light-hero">
+<!-- PAGE HEADER -->
+<section class="page-header">
   <h1>Study Modules</h1>
-  <p>Explore productivity and collaboration tools used in academic settings</p>
+  <p>
+    Explore productivity and collaboration tools commonly used in
+    academic and professional ICT environments.
+  </p>
 </section>
 
-<!-- MODULES GRID -->
+<!-- MODULES -->
 <section class="modules-section">
 
   <div class="modules-grid">
@@ -36,73 +39,58 @@
     <div class="module-card">
       <h3>Microsoft Word</h3>
       <p>Document creation, formatting, and academic writing tools.</p>
-      <button onclick="openModule('Microsoft Word')">Open Module</button>
+      <a href="word.html" class="module-btn">Open Module</a>
     </div>
 
     <div class="module-card">
       <h3>Microsoft Excel</h3>
       <p>Spreadsheets, formulas, data organization, and analysis.</p>
-      <button onclick="openModule('Microsoft Excel')">Open Module</button>
+      <a href="excel.html" class="module-btn">Open Module</a>
     </div>
 
     <div class="module-card">
       <h3>Microsoft PowerPoint</h3>
       <p>Presentation design and multimedia integration.</p>
-      <button onclick="openModule('Microsoft PowerPoint')">Open Module</button>
+      <a href="powerpoint.html" class="module-btn">Open Module</a>
     </div>
 
     <div class="module-card">
       <h3>Google Docs</h3>
       <p>Real-time document collaboration and cloud editing.</p>
-      <button onclick="openModule('Google Docs')">Open Module</button>
+      <a href="collaboration.html" class="module-btn">Open Module</a>
     </div>
 
     <div class="module-card">
       <h3>Google Sheets</h3>
       <p>Online spreadsheets for collaborative data handling.</p>
-      <button onclick="openModule('Google Sheets')">Open Module</button>
+      <a href="file-sharing.html" class="module-btn">Open Module</a>
     </div>
 
     <div class="module-card">
       <h3>Canva</h3>
       <p>Visual design using templates and creative layouts.</p>
-      <button onclick="openModule('Canva')">Open Module</button>
+      <a href="canva.html" class="module-btn">Open Module</a>
     </div>
 
     <div class="module-card">
       <h3>Collaboration Tools</h3>
       <p>Platforms such as Google Meet, Zoom, and Microsoft Teams.</p>
-      <button onclick="openModule('Collaboration Tools')">Open Module</button>
+      <a href="collaboration.html" class="module-btn">Open Module</a>
     </div>
 
     <div class="module-card">
       <h3>Time Management</h3>
       <p>Digital tools and techniques for organizing academic tasks.</p>
-      <button onclick="openModule('Time Management')">Open Module</button>
+      <a href="timemanagement.html" class="module-btn">Open Module</a>
     </div>
 
   </div>
-
 </section>
 
 <!-- FOOTER -->
-<footer class="footer light-footer">
-  <p>CollabTech Study Guide © 2026</p>
+<footer class="footer">
+  CollabTech Study Guide © 2026
 </footer>
-
-<!-- MODULE TRACKING -->
-<script>
-function openModule(moduleName) {
-  let modules = JSON.parse(localStorage.getItem("openedModules")) || [];
-
-  if (!modules.includes(moduleName)) {
-    modules.push(moduleName);
-    localStorage.setItem("openedModules", JSON.stringify(modules));
-  }
-
-  alert(moduleName + " module opened.");
-}
-</script>
 
 </body>
 </html>
